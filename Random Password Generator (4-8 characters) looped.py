@@ -9,7 +9,6 @@ while True:
 
     userinput = input("How long do you want your password(4-8): ")
     userinput = int(userinput)
-    userincorrect = 0
 
     upper_char1 = chr(random.randint(65, 90))
     upper_char2 = chr(random.randint(65, 90))
@@ -21,23 +20,18 @@ while True:
     symbol2 = chr(random.randint(33, 38))
 
     if userinput == 4:
-        userincorrect = + 1
         print(shuffle(upper_char1 + lower_char2 + num2 + symbol1))
 
     elif userinput == 5:
-        userincorrect = + 1
         print(shuffle(upper_char1 + num2 + lower_char1 + num1 + symbol2))
 
     elif userinput == 6:
-        userincorrect = + 1
         print(shuffle(upper_char1 + num2 + num1 + lower_char1 + lower_char2 + symbol1))
 
     elif userinput == 7:
-        userincorrect = + 1
         print(shuffle(upper_char1 + num2 + num1 + lower_char1 + lower_char2 + symbol1 + symbol2))
 
     elif userinput == 8:
-        userincorrect = + 1
         print(shuffle(upper_char1 + upper_char2 + lower_char1 + lower_char2 + num2 + num1 + symbol1 + symbol2))
     else:
 

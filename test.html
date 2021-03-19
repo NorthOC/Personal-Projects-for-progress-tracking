@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Jungle Dubplates</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: auto;
+            padding: auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background: url('https://hddesktopwallpapers.in/wp-content/uploads/2015/09/jungle-wallpaper-A2.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-height: 40px;
+            display: flex;
+            background-color: rgb(51, 51, 51);
+            z-index: 9999;
+        }
+        #header-img{
+            width: 35px;
+            height: 35px;
+            padding-left: 1%;
+            margin-right: 0px;
+            align-self: center;
+            position: relative;
+
+        }
+        #navi{
+            width: 100%;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nav-li{
+            list-style: none;
+        }
+        .nav-li .nav-link{
+            margin: 20px auto;
+            padding: 20px 5vw;
+            padding-bottom: 11px;
+            text-decoration: none;
+            color: navajowhite;
+            
+        }
+        @media (max-width: 1085px){
+            #tank{
+                flex-direction: column;
+                align-items:center;
+            }
+            .product{
+                min-width: 300px;
+            }
+        }
+        .nav-link:hover {
+        background-color: rgba(89, 209, 95, 0.637);
+        border-radius: 5px;
+        }
+        #section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 200px;
+            margin-top: 100px;
+            text-align: center;
+        }
+        #email-label{
+            display: block;
+            font-size: 72px;
+            padding-top: 40px;
+            padding-bottom: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-color: red;
+            background-image: linear-gradient(45deg, #60d884, #d18b22);
+            background-size: 100%;
+            background-repeat: repeat;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px #333);
+        }
+        #email{
+            display: inline-block;
+            text-align: center;
+            font-family: Arial, 'Poppins', sans-serif;
+            font-size: 22px;
+            color: #f3f3f3;
+            background-color: rgba(0, 0, 0, 0.651);
+            text-decoration: none;
+            border: none;
+        }
+        #submit{
+            margin-top: 20px;
+            background-color: #60d884;
+            opacity: 0.8;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            padding: 15px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.3s;
+        }
+        #submit:hover {
+            opacity: 1;
+            color: white;
+        }
+        .grid{
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            padding-top: 30px;
+
+        }
+        .icon{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 125px;
+            width: 20vw;
+        }
+        .icon img{
+            min-width: 60%;
+            max-width: 60%;
+            padding-left: 40px;
+        }
+        .description{
+            display: flex;
+            flex-direction: column;
+            height: 125px;
+            width: 100%;
+            padding: 5px;
+            color: gold;
+        }
+        .description h2{
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        .description p{
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        .section{
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+            margin-top: 50px;
+            padding-bottom: 60px;
+            overflow:hidden;
+            background-color: rgba(51, 51, 51, 0.767);
+        }
+        #video{
+            display: block;
+            align-self: center;
+            padding-top: 50px;
+            max-width: 560px;
+            width: 100%;
+        }
+        .vidsec{
+            display: flex;
+            justify-content: center;
+        }
+        .pricing{
+            margin-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0;
+        }
+        .product{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: calc(100% / 3);
+            margin: 10px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            background-color: rgba(51, 51, 51, 0.767);
+            color: white;
+            transition-duration: 0.3s;
+        }
+        .order{
+            display: block;
+            text-align: center;
+            font-size: 72px;
+            padding-top: 0px;
+            padding-bottom: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-image: linear-gradient(red, yellow, green);
+            background-size: 100%;
+            background-repeat:unset;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px #333);
+        }
+        .level{
+            background-color: rgba(110, 22, 22, 0.767);
+            color: white;
+            padding: 15px 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .product:hover{
+            width: calc(100% / 2);
+        }
+        @media (max-width:1245px) {
+            .product:hover{
+            width: calc(100% / 3);
+        }
+        }
+        .selector{
+            background-color: #d8cc60;
+            opacity: 0.8;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            padding: 15px 40px;
+            text-align: center;
+            text-decoration: none;
+            margin: 15px 0;
+            font-size: 16px;
+            transition-duration: 0.3s;
+            cursor:pointer;
+        }
+        .selector:hover{
+            background-color: #7cd860;
+            color: white;
+        }
+
+        .product ol{
+            margin: 15px 0px;
+            list-style: none;
+            padding-left: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .product li{
+            display: block;
+            text-align: center;
+            line-height: 1.6em;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <img id="header-img" src="https://cdn.worldvectorlogo.com/logos/jsrender-1.svg" alt="">
+        <nav id="nav-bar">
+            <ul id="navi">
+                <li class="nav-li"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-li"><a class="nav-link" href="#about-us">About</a></li>
+                <li class="nav-li"><a class="nav-link" href="#video">Weekly mix</a></li>
+                <li class="nav-li"><a class="nav-link" href="#tank">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="section">
+        <form id="form" action="https://www.freecodecamp.com/email-submit" target="_blank">
+            <label id="email-label" for="email">Receive our newsletter</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </section>
+    <section class="section" id="about-us">
+        <div class="grid">
+            <div class="icon"> <img src="https://www.analogcutmastering.com/wp-content/uploads/2014/12/12inches_small.png" alt=""></div>
+            <div class="description">
+                <h2>Unique Dubplates</h2>
+                <p>We connect with various known and niche artists, providing jungle dubplates from all over the world. From Kingston, Jamaica to London, UK!</p></div>
+        </div>
+        <div class="grid">
+            <div class="icon"> <img src="https://www.pngkey.com/png/full/470-4705609_4th-disciple-mixtape-vol-mix-tape-png.png" alt=""></div>
+            <div class="description">
+                <h2>Exclusive mixes</h2>
+                <p>Hit us up with your favourite artists and we will do the rest to provide a unique mix!</p></div>
+        </div>
+        <div class="grid">
+            <div class="icon"> <img src="https://lh3.googleusercontent.com/proxy/aKaRkFKFBRiutFaumdsH6eMqH6cdKarPaUtc6DI-IYfR-qQ0hmZRz2x_nFuBEr8yvP4rUiI_HUOafzC-4-SDxp3Jkt60YMSXqtFNKiKs8ZlecFs_a4Y" alt=""></div>
+            <div class="description">
+                <h2>Showcasing your music</h2>
+                <p>Gaining rep can be difficult these days if you do it by yourself. If you produce jungle music, contact us with your tracks and we will play them! If the track vibes with the people, we will craft a vinyl of your song and ship it to you for free!</p></div>
+        </div>
+    </section>
+    <section class="vidsec">
+    <iframe id="video" height="315" src="https://www.youtube.com/embed/B0mQZ5H5e9U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <h1 class="order">Order our Services NOW!</h1>
+    <section class="pricing" id="tank">
+        <div class="product">
+            <div class="level">Dubplates</div>
+            <h2>$10-$100</h2>
+            <ol>
+                <li>Over 5000 unique prints</li>
+                <li>From the early 90s to today</li>
+                <li>Take a quiz and we'll pick a dub for you!</li>
+            </ol>
+            <button class="selector">Find Dubplate</button>
+        </div>
+        <div class="product">
+            <div class="level">Mix My Artists</div>
+            <h2>$15-$60</h2>
+            <ol>
+                <li>Up to 2 hours</li>
+                <li>No limit on artists</li>
+                <li>We can also mix specific songs!</li>
+            </ol>
+            <button class="selector" href="#">Order mix</button>
+        </div>
+        <div class="product">
+            <div class="level">Play My Track</div>
+            <h2>FREE</h2>
+            <ol>
+                <li>Upload your track for everyone to hear</li>
+                <li>The track will be played in at least 2 mixes</li>
+                <li>More listens - more rewards for you!</li>
+            </ol>
+            <button class="selector" href="#">Upload track</button>
+        </div>
+    </section>
+</body>

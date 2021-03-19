@@ -7,6 +7,7 @@ Things done so far:
 2. Instagram like/comment bot by tag (without beutiful soup) -PYTHON.
 3. Pink Guy tribute page -HTML/CSS.
 4. Dungeons and Dragons Character Creation Form -HTML/CSS.
+5. Jungle Dubplate Product Landing Page -HTML/CSS.
 
 work in progress:
 1. HTML projects

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <style>
+        body{
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
+        }
+        #navbar{
+            position: fixed;
+            height: 100%;
+            min-width: 200px;
+            width: 300px;
+            top: 0;
+            left: 0px;
+            border-right: 3px solid rgba(122, 122, 122, 0.603);
+
+        }
+        #navbar header{
+            width: 300px;
+            text-align: center;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            background-color: rgb(241, 241, 241);
+        }
+        #nav-container a{
+            display: block;
+            width: 300px;
+            text-decoration: none;
+            color: rgb(99, 99, 99);
+            border-top: 1px solid rgba(88, 88, 88, 0.425);
+            text-align: left;
+            padding-left: 10px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: rgb(241, 241, 241);
+        }
+        #nav-container{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            height: 88%;
+            text-align: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        #main-doc{
+            position: absolute;
+            margin-left: 310px;
+            padding: 20px;
+            margin-bottom: 110px;
+            width: 70%;
+        }
+        .main-section header{
+            font-size: 26px;
+            text-decoration-line: underline;
+        }
+        .code-container{
+            display: block;
+            background-color: rgb(231, 231, 231);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+        }
+        .code{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        @media (max-width: 1209px){
+            #navbar{
+                display: block;
+                position:unset;
+                border-right: 0px;
+                width: 100%;
+                
+            }
+            #navbar header{
+                width: 100%;
+                text-align: center;
+            }
+            #nav-container a{
+                width: 100%;
+                text-align: center;
+            }
+            #main-doc{
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <nav id="navbar">
+            <header>TensorFlow Documentation</header>
+            <div id="nav-container">
+                <a class="nav-link" href="#Overview">Overview</a>
+                <a class="nav-link" href="#TensorFlow">TensorFlow</a>
+                <a class="nav-link" href="#TensorFlow_2.0">TensorFlow 2.0</a>
+                <a class="nav-link" href="#Set_Up_and_Basic_Usage">Set Up and Basic Usage</a>
+                <a class="nav-link" href="#Tensors">Tensors</a>
+                <a class="nav-link" href="#What_are_graphs?">What are graphs?</a>
+                <a class="nav-link" href="#The_benefits_of_graphs">The benefits of graphs</a>
+                <a class="nav-link" href="#Solving_machine_learning_problems">Solving machine learning problems</a>
+                <a class="nav-link" href="#Data">Data</a>
+            </div>
+        </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Overview">
+            <header>Overview</header>
+            <p>TensorFlow has APIs available in several languages both for constructing and executing a TensorFlow graph. The Python API is at present the most complete and the easiest to use, but other language APIs may be easier to integrate into projects and may offer some performance advantages in graph execution.</p>
+            <p>A word of caution: the APIs in languages other than Python are not yet covered by the API stability promises.</p>
+            <ul>
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Go</li>
+                <li>Swift (Early release)</li>
+            </ul>
+            <p>The community is encouraged to develop and maintain support for other languages with the approach recommended by the TensorFlow maintainers. For example, see the bindings for:</p>
+            <ul>
+                <li>C#: TensorFlowSharp and TensorFlow.NET,</li>
+                <li>Haskell,</li>
+                <li>Julia,</li>
+                <li>MATLAB,</li>
+                <li>R,</li>
+                <li>Ruby,</li>
+                <li>Rust,</li>
+                <li>Scala.</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="TensorFlow">
+            <header>TensorFlow</header>
+            <div class="code-container">
+            <code class="code">pip install tensorflow</code>
+            </div>
+        </section>
+
+        <section class="main-section" id="TensorFlow_2.0">
+            <header>TensorFlow 2.0</header>
+            <p>There are multiple changes in TensorFlow 2.0 to make TensorFlow users more productive. TensorFlow 2.0 removes redundant APIs, makes APIs more consistent (Unified RNNs, Unified Optimizers), and better integrates with the Python runtime with Eager execution.</p>
+            <p>Many RFCs have explained the changes that have gone into making TensorFlow 2.0. This guide presents a vision for what development in TensorFlow 2.0 should look like. It's assumed you have some familiarity with TensorFlow 1.x.</p>
+        </section>
+
+        <section class="main-section" id="Set_Up_and_Basic_Usage">
+            <header>Set Up and Basic Usage</header>
+            <div class="code-container">
+            <code class="code">import os <br><br>
+
+                import tensorflow as tf <br><br>
+                
+                import cProfile</code>
+            </div>
+            <p>In Tensorflow 2.0, eager execution is enabled by default.</p>
+            <div class="code-container">
+                <code class="code">tf.executing_eagerly()</code>
+                </div>
+            <p>Now you can run TensorFlow operations and the results will return immediately:</p>
+            <div class="code-container">
+                <code class="code">x = [[2.]] <br>
+                    m = tf.matmul(x, x) <br>
+                    print("hello, {}".format(m))</code>
+                </div>
+        </section>
+
+        <section class="main-section" id="Tensors">
+            <header>Tensors</header>
+            <div class="code-container">
+            <code class="code">import tensorflow as tf
+                </code>
+            </div>
+            <p>Tensors are multi-dimensional arrays with a uniform type (called a dtype). You can see all supported dtypes at tf.dtypes.DType.</p>
+            <p>All tensors are immutable like Python numbers and strings: you can never update the contents of a tensor, only create a new one.</p>
+        </section>
+        <section class="main-section" id="What_are_graphs?">
+            <header>What are graphs?</header>
+            <p>Graphs are data structures that contain a set of tf.Operation objects, which represent units of computation; and tf.Tensor objects, which represent the units of data that flow between operations. They are defined in a tf.Graph context. Since these graphs are data structures, they can be saved, run, and restored all without the original Python code.</p>
+        </section>
+        <section class="main-section" id="The_benefits_of_graphs">
+            <header>The benefits of graphs</header>
+            <p>With a graph, you have a great deal of flexibility. You can use your TensorFlow graph in environments that don't have a Python interpreter, like mobile applications, embedded devices, and backend servers. TensorFlow uses graphs as the format for saved models when it exports them from Python.</p>
+            <p>Graphs are also easily optimized, allowing the compiler to do transformations like:</p>
+            <ul>
+                <li>Statically infer the value of tensors by folding constant nodes in your computation ("constant folding").</li>
+                <li>Separate sub-parts of a computation that are independent and split them between threads or devices.</li>
+                <li>Simplify arithmetic operations by eliminating common subexpressions.</li>
+            </ul>
+            <p>There is an entire optimization system, Grappler, to perform this and other speedups.</p>
+            <p>In short, graphs are extremely useful and let your TensorFlow run fast, run in parallel, and run efficiently on multiple devices.</p>
+            <p>However, you still want to define our machine learning models (or other computations) in Python for convenience, and then automatically construct graphs when you need them.</p>
+
+        </section>
+        <section class="main-section" id="Solving_machine_learning_problems">
+            <header>Solving machine learning problems</header>
+           <p>Solving a machine learning problem usually consists of the following steps:</p>
+           <ul>
+               <li>Obtain training data.</li>
+               <li>Define the model.</li>
+               <li>Define a loss function.</li>
+               <li>Run through the training data, calculating loss from the ideal value</li>
+               <li>Calculate gradients for that loss and use an optimizer to adjust the variables to fit the data.</li>
+               <li>Evaluate your results.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="Data">
+            <header>Data</header>
+            <p>Supervised learning uses inputs (usually denoted as x) and outputs (denoted y, often called labels). The goal is to learn from paired inputs and outputs so that you can predict the value of an output from an input.</p>
+            <p>Each input of your data, in TensorFlow, is almost always represented by a tensor, and is often a vector. In supervised training, the output (or value you'd like to predict) is also a tensor.</p>
+            <p>Here is some data synthesized by adding Gaussian (Normal) noise to points along a line.</p>
+            <div class="code-container">
+                <code class="code"># The actual line <br><br>
+                    TRUE_W = 3.0 <br>
+                    TRUE_B = 2.0 <br><br>
+                    
+                    NUM_EXAMPLES = 1000 <br><br>
+                    
+                    # A vector of random x values <br>
+                    x = tf.random.normal(shape=[NUM_EXAMPLES]) <br> <br>
+                    
+                    # Generate some noise <br>
+                    noise = tf.random.normal(shape=[NUM_EXAMPLES]) <br><br>
+                    
+                    # Calculate y <br>
+                    y = x * TRUE_W + TRUE_B + noise
+                    </code>
+                </div>
+        </section>
+    </main>
+</body>

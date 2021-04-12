@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>I-Gabber Portfolio</title>
+    <style>
+        *, *:before, *::after{
+            box-sizing: inherit;
+        }
+        html{
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: auto;
+            padding: auto;
+            font-family: 'Indie Flower', cursive;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: white;
+            background-color: #030303;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            position: fixed;
+            justify-content: flex-end;
+            background-color: #1A1A1B;
+            top: 0;
+            left: 0;
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.397);
+            z-index: 999;
+        }
+        #nav-div{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .nav-link{
+            display: block;
+            border-radius: 7px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 1rem;
+            flex-grow: 1;
+            color: white;
+            transition: 1s;
+        }
+        #welcome-link:hover{
+            background-color: rgba(131,58,180,1);
+            color: black;
+            transition: 0.7s;
+            flex-grow: 0.7;
+            letter-spacing: 10px;
+        }
+        #projects-link:hover{
+            background-color: rgba(252,176,69,1);
+            color: black;
+            transition: 0.7s;
+            flex-grow: 0.7;
+            letter-spacing: 10px;
+        }
+        #contact-link:hover{
+            background-color: rgb(245, 58, 58);
+            color: black;
+            transition: 0.7s;
+            flex-grow: 0.7;
+            letter-spacing: 10px;
+        }
+        @media (max-width: 650px) {
+            .nav-link{
+                font-size: 1rem;
+            }
+            #welcome-link:hover{
+            transition: 0.7s;
+            flex-grow: 0.5;
+            letter-spacing: 3px;
+            }
+            #projects-link:hover{
+                transition: 0.7s;
+                flex-grow: 0.5;
+                letter-spacing: 3px;
+            }
+            #contact-link:hover{
+                transition: 0.7s;
+                flex-grow: 0.5;
+                letter-spacing: 3px;
+            }
+        }
+        #welcome-section{
+            width: 100%;
+            height: 100vh;
+            padding-top: 150px;
+            background-image: linear-gradient(0deg, #030303 0%, #050505 100%);
+            cursor: default;
+        }
+        #intro{
+            background: linear-gradient(25deg, rgba(131,58,180,1) 40%, rgba(252,176,69,1) 50%, rgb(245, 58, 58) 60%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            margin-bottom: 0px;
+            padding-bottom: 2px;
+        }
+        #welcome-section h2{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        #alsoknownas{
+            position: absolute;
+            left: 48%;
+            animation: fade 0.5s linear 6.1s forwards 1;
+        }
+        @keyframes fade{
+            100%{
+                opacity: 0;
+            }
+        }
+        #webdev{
+            opacity: 0;
+            animation: webdev 2s linear 7s forwards 1;
+            background: linear-gradient(25deg, rgba(131,58,180,1) 45%, rgba(252,176,69,1) 55%, rgb(245, 58, 58) 65%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+        }
+        @keyframes webdev{
+            100%{
+                opacity: 100%;
+            }
+        }
+        #aka{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .aka p{
+            color: white;
+            opacity: 0;
+            position: relative;
+            padding: 0;
+            margin: auto;
+        }
+        #noc{
+            padding-right: 350px;
+            animation-name: noc;
+            animation-duration: 6s;
+            animation-delay: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-fill-mode: backwards;
+        }
+        #denx{
+            padding-left: 350px;
+            animation-name: noc;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-fill-mode:backwards;
+        }
+        #chikk{
+            padding-right: 250px;
+            animation-name: noc;
+            animation-duration: 4s;
+            animation-delay: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-fill-mode: backwards;
+        }
+        #igab{
+            animation-name: noc;
+            animation-duration: 3.5s;
+            animation-delay: 3.5s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-fill-mode: backwards;
+        }
+        #fray{
+            padding-left: 150px;
+            animation-name: noc;
+            animation-duration: 3s;
+            animation-delay: 4s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(1, 0, 0, 1);
+            animation-fill-mode: backwards;
+        }
+        @keyframes noc{
+            80%{
+                font-size: 32px;
+                opacity: 100%;
+                }
+            }
+        #projects{
+            width: 100%;
+            padding: 2.5rem 1.5rem;
+            border-top: #0c0c0c solid 1px;
+            border-bottom: #0c0c0c solid 1px;
+        }
+        #projects h2{
+            cursor: default;
+            color: #f3f3f3;
+            font-size: 50px;
+        }
+        #projects-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+            grid-gap: 2rem;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            margin-bottom: 6rem;
+        }
+        .grid-item{
+        background: #303033;
+        box-shadow: 2px 4px rgba(0, 0, 0, 0.377);
+        border-radius: 5px;
+        text-decoration: none;
+        }
+        .projects-image {
+            width: calc(100%/1);
+            object-fit:fill;
+            border-radius: 5px;
+            margin-bottom: -13px;
+        }
+        #mystery-item{
+            filter: invert(0.2);
+            transition: 1s;
+        }
+        #mystery-item:hover{
+            filter: invert(1);
+        }
+
+        .project-tile {
+            font-size: 30px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-top: transparent solid 2px;
+            animation-name: bordero;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+            -webkit-animation-play-state: paused;
+        }
+        .grid-item:hover .project-tile{
+            animation-play-state: running;
+            -webkit-animation-play-state: running;
+        }
+        @keyframes bordero{
+            100%{
+                color: white;
+                text-shadow: none;
+                border-top: white solid 2px;
+            }
+        }
+        .grid-item:last-child{
+            background: rgba(255, 99, 71, 0);
+            box-shadow: none;
+        }
+        .projects-image:last-child{
+            width: 70%;
+        }
+        #contact{
+            width: 100%;
+            height: 100vh;
+            padding: 2.5rem 1.5rem;
+            background-color: #030303;
+        }
+        #contact h2{
+            padding-top: 50px;
+            margin-top: 0;
+            cursor: default;
+            font-size: 100px;
+            margin-bottom: 0;
+            text-shadow: 3px 0 1px rgb(30,242,241) , -3px 0 1px rgb(246,5,10) ;
+        }
+        #contact p{
+            margin-top: 10px;
+        }
+        #contdiv{
+            margin-top: 50px;
+            display: block;
+        }
+        .profile-link{
+            line-height: 4em;
+            padding: 10px 20px;
+            margin: auto 5px;
+            text-decoration: none;
+            transition: 0.2s;
+            color: rgb(245, 58, 58);
+            display: inline-block;
+            animation-name: threed;
+            animation-duration: 0.2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+            -webkit-animation-play-state: paused;
+        }
+        .profile-link:hover{
+            animation-play-state: running;
+            -webkit-animation-play-state: running;
+        }
+        @keyframes threed{
+            100%{
+                text-shadow: 2px 0 1px rgb(30,242,241) , -2px 0 1px rgb(246,5,10) ;
+                color: white;
+            }
+        }
+        @media(max-width: 660px){
+            .profile-link{
+                line-height: 10px;
+            }
+            #contact{
+                height: 105vh;
+            }
+            }
+        .icon{
+            width: 25px;
+            height: 25px;
+            filter: invert(1);
+            margin: -3px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="nav-div">
+            <a class="nav-link" id="welcome-link" href="#welcome-section">Hello World</a>
+            <a class="nav-link" id="projects-link" href="#projects">Arts & Crafts</a>
+            <a class="nav-link" id="contact-link" href="#contact">For Business</a>
+        </div>
+
+    </nav>
+<div id="fadeblack">
+    <section id="welcome-section">
+        <h1 id="intro">My name is Denis</h1>
+        <h2 id="alsoknownas">aka.</h2>
+        <h2 id="webdev"> And I'm a web developer</h2>
+        <div class="aka">
+            <p id="noc">NorthOC</p>
+            <p id="denx">denisiux2</p>
+            <p id="igab">I-gabber</p>
+            <p id="chikk">Chikkara</p>
+            <p id="fray">Fraylare</p>
+        </div>
+    </section>
+
+    
+    <section id="projects">
+        <h2>Portfolio of Projects</h2>
+        <div id="projects-grid">
+            <a href="https://codepen.io/northoc/pen/qBqMWNm" target="_blank" class="grid-item">
+                <img src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/dnd%20image.png?raw=true" alt="project" class="projects-image">
+                <p class="project-tile">Character Creation Form</p>
+            </a>
+            <a href="https://codepen.io/northoc/pen/zYNONPp" target="_blank" class="grid-item">
+                <img src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/documentation%20image.png?raw=true" alt="project" class="projects-image">
+                <p class="project-tile">Documentation mock-up</p>
+            </a>
+            <a href="https://codepen.io/northoc/pen/VwmJzYa" target="_blank" class="grid-item">
+                <img src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/dubplate%20page.png?raw=true" alt="project" class="projects-image">
+                <p class="project-tile">Product landing page</p>
+            </a>
+            <a href="https://github.com/NorthOC/Personal-Projects-for-progress-tracking" target="_blank" class="grid-item">
+                <img src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/Question_Mark.svg.png?raw=true" alt="mystery" id="mystery-item" class="projects-image">
+            </a>
+
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2 class="glitch" data-text="Lets Team Up!">Lets Team Up!</h2>
+        <p>I'll respond in less than 24 hours. Promise :)</p>
+        <div id="contdiv">
+            <a class="profile-link" target="_blank" href="https://www.facebook.com/Denka.okey">
+                <img class="icon" src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/ca3bf05cfab74677e5b73b130bd30991.png?raw=true" alt=""> Facebook
+            </a>
+            <a class="profile-link" target="_blank" href="https://www.linkedin.com/in/denis-lisunov/">
+                <img class="icon" src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/9942.png?raw=true" alt=""> LinkedIn
+            </a>
+            <a class="profile-link" id="profile-link" target="_blank" href="https://github.com/NorthOC/">
+                <img class="icon" src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/part+1+github-1320568339880199515.png?raw=true" alt=""> GitHub
+            </a>
+            <a class="profile-link" target="_blank" href="https://www.freecodecamp.org/northoc">
+                <img class="icon" src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/iconfinder_codecademy_4691345.png?raw=true" alt=""> CodeAcademy
+            </a>
+            <a class="profile-link" target="_blank" href="mailto:rev.denisas@gmail.com">
+                <img class="icon" src="https://github.com/NorthOC/Personal-Projects-for-progress-tracking/blob/main/images/gmail-32-761667.png?raw=true" alt=""> Email
+            </a>
+        </div>
+    </section>
+</div>
+</body>

@@ -9,6 +9,7 @@ Things done so far:
 4. Dungeons and Dragons Character Creation Form -HTML/CSS.
 5. Jungle Dubplate Product Landing Page -HTML/CSS.
 6. TensorFlow Documentation mock up -HTML/CSS.
+7. Personal portfolio -HTML/CSS.
 
 work in progress:
-HTML projects
+JS projects

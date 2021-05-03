@@ -10,6 +10,9 @@ Things done so far:
 5. Jungle Dubplate Product Landing Page -HTML/CSS.
 6. TensorFlow Documentation mock up -HTML/CSS.
 7. Personal portfolio -HTML/CSS.
-
+8. Palindrome checker -JS.
+9. Roman numeral converter -JS.
+10. ROT-13 cypher - JS.
+11. 
 work in progress:
 JS projects

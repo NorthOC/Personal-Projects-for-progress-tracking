@@ -1,0 +1,20 @@
+.author{
+    text-align: right;
+}
+.btn{
+    background-color: #4caf4f00; /* Green */
+    border: 1px solid #dadada;
+    color: #dadada;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn:hover{
+    color: rgb(173, 173, 173);
+    border-color: rgb(173, 173, 173);
+}
+.divy{
+    text-align: right;
+}

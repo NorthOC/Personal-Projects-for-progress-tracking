@@ -13,6 +13,6 @@ Things done so far:
 8. Palindrome checker -JS.
 9. Roman numeral converter -JS.
 10. ROT-13 cypher - JS.
-11. 
+11. Random Quote Machine -React.
 work in progress:
 JS projects

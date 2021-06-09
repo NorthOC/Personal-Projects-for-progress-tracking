@@ -13,8 +13,9 @@ Things done so far:
 8. Palindrome checker -JS.
 9. Roman numeral converter -JS.
 10. ROT-13 cypher - JS.
-11. Random Quote Machine -React.
-12. Markdown-previewer -React.
+11. Random Quote Machine -React. https://northoc.github.io/random-quote-machine/
+12. Markdown-previewer -React. https://northoc.github.io/markdown-previewer/
+13. Drum machine -React. https://northoc.github.io/drum-machine/
 
 work in progress:
 React projects

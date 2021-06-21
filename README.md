@@ -16,6 +16,7 @@ Things done so far:
 11. Random Quote Machine -React. https://northoc.github.io/random-quote-machine/
 12. Markdown-previewer -React. https://northoc.github.io/markdown-previewer/
 13. Drum machine -React. https://northoc.github.io/drum-machine/
+14. Google Search page copycat -HTML/CSS. https://northoc.github.io/google-homepage/
 
 work in progress:
 React projects

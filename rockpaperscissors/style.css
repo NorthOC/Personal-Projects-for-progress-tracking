@@ -1,0 +1,63 @@
+.incont{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(231, 116, 8);
+    width: 10%;
+    border-radius: 15px;
+    text-align: center;
+    color: black;
+}
+body{
+    background-color: black;
+    color: white;
+    font-size: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    margin: auto 5%;
+    width: 90%;
+}
+.msgs{
+    width: 90%;
+    text-align: center;
+}
+#container{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+#ending{
+    text-align: center;
+}
+#middle-cont{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 405px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pointer{
+    cursor: pointer;
+    width: 30%;
+    text-decoration: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+
+}
+img{
+    width: 90%;
+    filter: invert(1);
+}
+#rock{
+    margin: 15% 0px;
+}
+#retry{
+    margin-top: 30%;
+}

@@ -1,0 +1,107 @@
+* *::before *::after{
+    box-sizing: border-box;
+}
+body{
+    background-color: #273043;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+#calculator{
+    margin: 2% auto auto auto;
+    background-color: #3c4966 ;
+    display: block;
+    border-radius: 20px;
+    padding: 10px 5px;
+    box-shadow: 3px 2px 3px 3px rgba(0, 0, 0, 0.233);
+}
+@media only screen and (min-width: 450px) {
+    #calculator {
+      max-width: 500px;
+    }
+  }
+#display{
+    background-color: #bbbbbb;
+    text-align: right;
+    margin: 20px 5px;
+    padding: 5px 20px 5px 5px;
+    font-size: 50px;
+    box-shadow: 0px 0px 0px 1px rgb(49, 48, 48);
+    border-radius: 5px;
+}
+@media (max-width: 450px){
+    #display{
+            font-size: 35px;
+    }
+}
+.zero{grid-area: zeros;}
+.one{grid-area: one;}
+.two{grid-area: two;}
+.three{grid-area: three;}
+.four{grid-area: four;}
+.five{grid-area: five;}
+.six{grid-area: six;}
+.seven{grid-area: seven;}
+.eight{grid-area: eight;}
+.nine{grid-area: nine;}
+.divide{grid-area: divide;}
+.multiply{grid-area: multiplys;}
+.minus{grid-area: minus;}
+.plus{grid-area: plus;}
+.equals{grid-area: equals;}
+.dot{grid-area: dots}
+.clear{grid-area: clear}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:"clear clear . ." 
+                        "seven eight nine multiplys"
+                        "six five four divide"
+                        "three two one minus"
+                        "zeros dots equals plus";
+
+}
+.grid-container > button {
+    background-color: #b3cbe2;
+    box-shadow: 1px 1px rgb(121, 121, 121);
+    text-align: center;
+    padding: 20px 0;
+    margin: 5px 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#plus, #minus, #multiply, #divide{
+    background-color: #b2bde2;
+}
+#plus:hover, #minus:hover, #multiply:hover, #divide:hover{
+    background-color: #bbb5c0;
+}
+.grid-container > button:hover{
+    background-color: #bbb5c0 ;
+}
+footer{
+    margin-top: 25px;
+    font-size: 25px;
+}
+@media screen and (orientation:landscape)and (max-device-width: 736px) {
+    #calculator{
+        height: 300px;
+        margin-top: 0px;
+    }
+    body{
+        margin-top: 0px;
+    }
+    #display{
+        font-size: 25px;
+    }
+    .grid-container > button{
+        margin: 1px;
+        padding: 7px;
+        width: auto;
+        height: auto;
+    }
+    footer{
+        display: none;
+    }
+ }

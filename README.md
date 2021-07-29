@@ -18,5 +18,8 @@ Things done so far:
 13. Drum machine -React. https://northoc.github.io/drum-machine/
 14. Google Search page copycat -HTML/CSS. https://northoc.github.io/google-homepage/
 15. Rock paper scissors -HTML/CSS/JS (pure javascript to add event listeners instead of using react state methods) https://northoc.github.io/rockpaperscissors
+16. Calculator -HTML/CSS/JS (keyboard support included) https://northoc.github.io/calculator
+
 work in progress:
-React projects
+
+JS projects
